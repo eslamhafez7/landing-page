@@ -118,15 +118,17 @@ nav ul li a:hover {
         position: absolute;
         justify-content: center;
         align-items: center;
-        right: -100%;
+        left: -100%;
         top: 10%;
         gap: 4rem;
-        height: 100h;
-        backdrop-filter: blur(30px);
+        height: 100vh;
+        backdrop-filter: blur(10px);
         transition: 0.3s;
+        width: 80%;
+       z-index: 1;
     }
     nav ul.active {
-        right: 37%;
+        left: 31%;
     }
     nav ul li a {
         font-size: 2rem;
