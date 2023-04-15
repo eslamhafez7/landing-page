@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,300;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #9442FE;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.landing {
+    min-height: 100vh;
+    margin: 20px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    margin-left: 25px;
+}
+nav .logo {
+    color: #000;
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s ease-out;
+}
+nav .logo:hover {
+    color: var(--main-color);
+}
+nav ul li a{
+    color: #000;
+    font-size: 18px;
+    transition: 0.3s ease-out;
+}
+nav ul li a:hover {
+    color: var(--main-color);
+}
+.land-body {
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+}
+.intro-text span {
+    color: var(--main-color);
+}
+.intro-text p {
+    line-height: 2;
+    margin: 1rem 0 2rem 0;
+}
+.intro-text .main-btn {
+    background-color: var(--main-color);
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.5s ease-out;
+}
+.intro-text .main-btn:hover {
+    color: #fff;
+}
+.land-body .social {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    row-gap: 1rem;
+}
+.land-body .social a {
+    background-color: var(--main-color);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.land-shape {
+    width: 400px;
+}
+.land-img {
+    position: relative;
+}
+.land-img .image {
+    position: absolute;
+    top: 10%;
+}
+.toggle {
+    display: none;
+}
+@media screen and (max-width: 667px) {
+    .landing {
+        padding: 30px 20px;
+        /* box-shadow: none; */
+        margin: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        right: -100%;
+        top: 10%;
+        gap: 4rem;
+        height: 100h;
+        backdrop-filter: blur(30px);
+        transition: 0.3s;
+    }
+    nav ul.active {
+        right: 37%;
+    }
+    nav ul li a {
+        font-size: 2rem;
+    }
+    .land-body {
+        flex-direction: column;
+        padding-top: 100px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .land-body .social {
+        flex-direction: row;
+        order: 2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        gap: 2rem;
+    }
+    .land-shape {
+        width: inherit;
+    }
+    .toggle {
+        display: block;
+        font-size: 1.6rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
