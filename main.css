@@ -120,7 +120,7 @@ nav ul li a:hover {
         justify-content: center;
         align-items: center;
         left: -100%;
-        top: 10%;
+        top: 0;
         gap: 4rem;
         height: 100vh;
         backdrop-filter: blur(10px);
